@@ -1,16 +1,17 @@
+# IMPORTANT NOTICE - THIS SETUP OLNLY WORKS INSIDE THE TUM NETWORK
 
-
+# Install
 
 1. clone this repository
   ```
     git clone https://github.com/Bramas/hotcrp-docker-compose
     cd hotcrp-docker-compose
   ```
-2. clone hotcrp repository 
+2. clone modified hotcrp repository 
   ```
-    git clone https://github.com/kohler/hotcrp app
+    git clone https://github.com/ls1admin/hotcrp.git
   ```
-3. Rename `.env.default` to `.env` and edit the file as you wish (in particular set up the SMTP connection information: host, user and password)
+3. Rename `.env.default` to `.env` and edit the file as you wish 
 4. start docker-compose
   ```
   docker-compose up -d
