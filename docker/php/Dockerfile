@@ -10,7 +10,8 @@ RUN apt-get update && \
 	libicu-dev libgmp-dev \
 	re2c libmhash-dev \
 	libmcrypt-dev file \
-	poppler-utils
+	poppler-utils \
+        libldap2-dev
 	
 RUN apt-get install -y -q --no-install-recommends \
 		msmtp
@@ -23,6 +24,10 @@ RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
 
 RUN docker-php-ext-install zip
+
+
+RUN docker-php-ext-configure ldap
+RUN docker-php-ext-install ldap
 
 # And clean up the image
 
