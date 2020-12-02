@@ -13,15 +13,8 @@ services:
             # you can store mail log in a volume 
             # (but create the file locally before startup)
             #- ./logs/smtp/maillog:/var/log/maillog
-        environment:
-            SMTP_SERVER: ${SMTP_SERVER}
-            SMTP_PORT: ${SMTP_PORT}
-            SMTP_USERNAME: ${SMTP_USERNAME}
-            SMTP_PASSWORD:  ${SMTP_PASSWORD}
-            SERVER_HOSTNAME: ${SERVER_HOSTNAME}
-            DESTINATION_CONCURRENCY_LIMIT: "1"
-            DESTINATION_RATE_DELAY: "1s"
-
+        env_file:
+            - .env
 
     php:
         build:
