@@ -108,6 +108,7 @@ $Opt["internalMailer"] = true;
 //                   when using httpAuthLogin.
 //   disableNewUsers Don’t allow new users to register.
 
+$Opt["ldapLogin"] = $_ENV["HOTCRP_LDAP_LOGIN_STRING"];
 
 // PASSWORD SECURITY
 //

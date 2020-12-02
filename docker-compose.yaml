@@ -28,6 +28,8 @@ services:
             - ./docker/php/msmtprc:/etc/msmtprc
             - ./docker/php/php.conf:/usr/local/etc/php/conf.d/custom.ini:ro
             - ./logs/php:/var/log
+        env_file:
+            - .env
         environment:
             MYSQL_USER: hotcrp
             MYSQL_PASSWORD: hotcrppwd
